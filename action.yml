@@ -1,9 +1,9 @@
-name: 'HTML5 Validator'
-description: 'Checks HTML5 Syntax using html5validator'
+name: 'HTML5 Validator Experimental'
+description: 'Checks HTML5 Syntax using an experimental branch of html5validator'
 author: Cyb3r-Jak3
 branding:
   icon: 'award'  
-  color: 'green'
+  color: 'red'
 inputs:
   root:
     description: 'Path of the files to test'

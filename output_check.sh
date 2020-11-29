@@ -12,7 +12,7 @@ if [[ "$CONFIG_OUT" -ne 0 ]]; then
     exit 1
 fi
 
-if [[ "$SKIP_OUT" -ne 1]]; then
+if [[ "$SKIP_OUT" -ne 1 ]]; then
     echo "Skip step failed"
 fi
 

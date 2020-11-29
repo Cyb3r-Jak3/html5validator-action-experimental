@@ -22,7 +22,7 @@ function main() {
     fi
 
     if uses "${INPUT_SKIP}"; then
-        BuildARGS+="--skip ${INPUT_SKIP}"
+        BuildARGS+=" --skip ${INPUT_SKIP}"
     fi
 
     if uses "${INPUT_CONFIG}"; then

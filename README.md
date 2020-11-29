@@ -3,8 +3,8 @@
 
 ## This action is not stable and can change rapidly. 
 ## [Stable Verison](https://github.com/Cyb3r-Jak3/html5validator-action)
-![Action Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Action%20Test/badge.svg?branch=main) !
-![Integration Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Integration/badge.svg) ![Build Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Build%20Test/badge.svg)
+![Action Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Action%20Test/badge.svg?branch=main) 
+![Integration Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Integration%20Test/badge.svg) ![Build Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Build%20Test/badge.svg)
 
 This action checks the syntax of your html files in the path that you provide.  
 It used an experimential branch of [html5validator](https://github.com/svenkreiss/html5validator), which I develop, and a docker image that I build from it found [here](https://github.com/Cyb3r-Jak3/html5validator-docker).

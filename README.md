@@ -3,7 +3,8 @@
 
 ## This action is not stable and can change rapidly. 
 ## [Stable Verison](https://github.com/Cyb3r-Jak3/html5validator-action)
-![Actions Status](https://github.com/Cyb3r-Jak3/html5validator-action/workflows/Action%20Test/badge.svg?branch=master) ![Actions Status](https://github.com/Cyb3r-Jak3/html5validator-action/workflows/Integration/badge.svg) ![Actions Status](https://github.com/Cyb3r-Jak3/html5validator-action/workflows/Build%20Test/badge.svg?branch=master)
+![Action Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Action%20Test/badge.svg?branch=main) !
+![Integration Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Integration/badge.svg) ![Build Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Build%20Test/badge.svg)
 
 This action checks the syntax of your html files in the path that you provide.  
 It used an experimential branch of [html5validator](https://github.com/svenkreiss/html5validator), which I develop, and a docker image that I build from it found [here](https://github.com/Cyb3r-Jak3/html5validator-docker).
@@ -30,6 +31,10 @@ Format for logging. Supported values: `json, xml, gnu, text`.
 ### `Log_Level`
 
 Log level to use. Supported values: `DEBUG, INFO, WARNING`. Default: `Warning`.
+
+### `Skip`
+
+Files names that should not be checked.
 
 ### `CSS`
 

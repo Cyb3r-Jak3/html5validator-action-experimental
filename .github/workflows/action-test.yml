@@ -36,6 +36,7 @@ jobs:
         root: empty
         config: tests/example_config.yaml
         action_debug: true
+
     - name: Test Skip
       id: skip
       uses: ./
@@ -43,6 +44,8 @@ jobs:
         root: tests/invalid/
         skip: index.html
         action_debug: true
+        css: "true"
+      continue-on-error: true
 
     - name: Check Failure
       id: invalid
@@ -73,4 +76,5 @@ jobs:
         VALID_OUT: ${{ steps.valid.outputs.result }}
         INVALID_OUT: ${{ steps.invalid.outputs.result }}
         CONFIG_OUT: ${{ steps.config.outputs.result }}
+        SKIP_OUT: ${{ steps.skip.outputs.result }}
         EMPTY_OUT: ${{ steps.empty.outputs.result }}

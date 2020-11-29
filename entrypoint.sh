@@ -11,7 +11,6 @@ function main() {
         exit 1
     fi
     echo "Running Validator"
-
     BuildARGS=''
 
     if uses "${INPUT_FORMAT}"; then
@@ -20,6 +19,10 @@ function main() {
 
     if usesBoolean "${INPUT_CSS}"; then
         BuildARGS+=" --also-check-css"
+    fi
+
+    if uses "${INPUT_SKIP}"; then
+        BuildARGS+="--skip ${INPUT_SKIP}"
     fi
 
     if uses "${INPUT_CONFIG}"; then

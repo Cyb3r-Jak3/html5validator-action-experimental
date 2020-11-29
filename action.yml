@@ -17,18 +17,22 @@ inputs:
   format:
     description: "Format for logging output. Valid values: gnu,xml,json,text"
     required: false
+  skip:
+    description: "File names to skip"
+    required: false
+    default: ""
   log_level:
     description: "Logging Level. Valid values: DEBUG, INFO, WARNING. Default: WARNING"
     required: false
     default: "WARNING"
   css:
     description: "Checks css as well"
-    require: false
-    default: false
+    required: false
+    default: "false"
   action_debug:
     description: "Flag that increase verbose output only used for troubleshooting the action."
     required: false
-    default: false
+    default: "false"
 outputs:
   result:
     description: 'The exit code'

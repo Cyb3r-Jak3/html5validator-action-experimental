@@ -36,6 +36,13 @@ jobs:
         root: empty
         config: tests/example_config.yaml
         action_debug: true
+    - name: Test Skip
+      id: skip
+      uses: ./
+      with:
+        root: tests/invalid/
+        skip: index.html
+        action_debug: true
 
     - name: Check Failure
       id: invalid

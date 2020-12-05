@@ -1,10 +1,16 @@
 # HTML5 Validator Experimental Action
 ---
+![Action Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Action%20Test/badge.svg?branch=main) 
+![Integration Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Integration%20Test/badge.svg) ![Build Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Build%20Test/badge.svg)
+
+---
 
 ## This action is not stable and can change rapidly. 
 ## [Stable Verison](https://github.com/Cyb3r-Jak3/html5validator-action)
-![Action Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Action%20Test/badge.svg?branch=main) 
-![Integration Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Integration%20Test/badge.svg) ![Build Test](https://github.com/Cyb3r-Jak3/html5validator-action-experimental/workflows/Build%20Test/badge.svg)
+
+If you are planning on using this for more then just testing please use a released version and not the main branch.
+
+---
 
 This action checks the syntax of your html files in the path that you provide.  
 It used an experimential branch of [html5validator](https://github.com/svenkreiss/html5validator), which I develop, and a docker image that I build from it found [here](https://github.com/Cyb3r-Jak3/html5validator-docker).
@@ -49,7 +55,7 @@ The exit code of the validation.
 ## Example usage
 
 ```yaml
-      uses: Cyb3r-Jak3/html5validator-action-experimental@v1
+      uses: Cyb3r-Jak3/html5validator-action-experimental@main
       with:
         root: tests/valid/
 ```

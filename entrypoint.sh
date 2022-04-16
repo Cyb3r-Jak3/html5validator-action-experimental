@@ -8,7 +8,8 @@ function main() {
         python --version
         html5validator --version
     fi
-
+    # Make sure repo is safe. https://github.com/actions/checkout/issues/760
+    git config --global --add safe.directory /github/workspace
     if ! uses "${INPUT_ROOT}" && ! uses "${INPUT_CONFIG}"; then
         echo ::error::"Need either root or config file"
         echo ::set-output name=result::"no config file or root path given"

@@ -20,14 +20,16 @@ jobs:
 
       # Need to manually change branch when making changes
     - name: No checkout test. Fail at Git Check
-      uses: Cyb3r-Jak3/html5validator-action@master
+      # uses: Cyb3r-Jak3/html5validator-action-experimental@master
+      uses: Cyb3r-Jak3/html5validator-action-experimental@bug/31
       with:
         root: tests/valid/
       continue-on-error: true
 
       # Need to manually change branch when making changes
     - name: No checkout test. Passes at Git Check
-      uses: Cyb3r-Jak3/html5validator-action@master
+      # uses: Cyb3r-Jak3/html5validator-action-experimental@master
+      uses: Cyb3r-Jak3/html5validator-action-experimental@bug/31
       with:
         root: tests/valid/
         skip_git_check: true

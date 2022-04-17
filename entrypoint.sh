@@ -9,7 +9,6 @@ function main() {
         html5validator --version
         git --version
         # Make sure repo is safe. https://github.com/actions/checkout/issues/760
-        git config --global --add safe.directory /github/workspace
     fi
     if ! uses "${INPUT_ROOT}" && ! uses "${INPUT_CONFIG}"; then
         echo ::error::"Need either root or config file"
@@ -18,6 +17,7 @@ function main() {
     fi
     echo "Running Validator"
 
+    git config --global --add safe.directory /github/workspace
 
     if ! git -C . rev-parse 2>/dev/null && ! usesBoolean "${INPUT_SKIP_GIT_CHECK}"; then
         echo ::set-output name=result::"There is no git respository detected"

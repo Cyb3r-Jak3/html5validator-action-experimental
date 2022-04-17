@@ -10,7 +10,6 @@ function main() {
         git --version
     fi
     # Make sure repo is safe. https://github.com/actions/checkout/issues/760
-    git config --global --add safe.directory /github/workspace
     if ! uses "${INPUT_ROOT}" && ! uses "${INPUT_CONFIG}"; then
         echo ::error::"Need either root or config file"
         echo ::set-output name=result::"no config file or root path given"
@@ -22,11 +21,11 @@ function main() {
     git -C . rev-parse
     usesBoolean "${INPUT_SKIP_GIT_CHECK}"
 
-    if ! git -C . rev-parse 2>/dev/null && ! usesBoolean "${INPUT_SKIP_GIT_CHECK}"; then
-        echo ::set-output name=result::"There is no git respository detected"
-        echo ::error::"There is no git respository detected"
-        exit 1
-    fi
+    # if ! git -C . rev-parse 2>/dev/null && ! usesBoolean "${INPUT_SKIP_GIT_CHECK}"; then
+    #     echo ::set-output name=result::"There is no git respository detected"
+    #     echo ::error::"There is no git respository detected"
+    #     exit 1
+    # fi
     echo "Paseed git check"
     BuildARGS=''
 

@@ -7,6 +7,7 @@ function main() {
         INPUT_LOG_LEVEL=DEBUG
         python --version
         html5validator --version
+        git --version
     fi
     # Make sure repo is safe. https://github.com/actions/checkout/issues/760
     git config --global --add safe.directory /github/workspace
@@ -18,7 +19,7 @@ function main() {
     echo "Running Validator"
     # if ! git -C . rev-parse 2>/dev/null && ! usesBoolean "${INPUT_SKIP_GIT_CHECK}"; then
 
-    git -C . rev-parse
+    git -C . rev-parse; echo $?
     usesBoolean "${INPUT_SKIP_GIT_CHECK}"
 
     if ! git -C . rev-parse 2>/dev/null && ! usesBoolean "${INPUT_SKIP_GIT_CHECK}"; then

@@ -31,7 +31,7 @@ jobs:
         skip_git_check: true
       continue-on-error: true
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Plain Test
       uses: ./

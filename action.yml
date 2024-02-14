@@ -1,5 +1,5 @@
-name: 'HTML5 Validator'
-description: 'Checks HTML5 Syntax using html5validator'
+name: 'HTML5 Validator Experimental'
+description: 'Checks HTML5 Syntax using html5validator (This version is experimental)'
 author: Cyb3r-Jak3
 branding:
   icon: 'award'  

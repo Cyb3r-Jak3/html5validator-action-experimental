@@ -31,9 +31,16 @@ inputs:
     description: "Skip checking that code has been checked out"
     required: false
     default: false
+  image_version:
+    description: "Docker image version to use. This is experimental and may not work"
+    required: false
+    default: "experimental-alpine"
 outputs:
   result:
     description: 'The exit code'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    VERSION: ${{ inputs.image_version }}
+    

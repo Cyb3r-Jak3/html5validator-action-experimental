@@ -1,4 +1,4 @@
-ENV VERSION=experimental-alpine
+ARG VERSION=experimental-alpine
 FROM ghcr.io/cyb3r-jak3/html5validator:$VERSION
 
 COPY entrypoint.sh /entrypoint.sh
